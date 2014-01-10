@@ -17,9 +17,10 @@
 {
     // Override point for customization after application launch.
     
+    // Init theme manager
     MMThemeManager *themeManager = [MMThemeManager sharedManager];
 
-    // Simple example of using user defaults to save selected theme
+    // The active theme can be saved with user defaults (only applicable if the app has multiple themes)
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
     NSString *theme = [userDefaults objectForKey:@"theme"];
