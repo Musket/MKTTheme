@@ -44,6 +44,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [[MMThemeManager sharedManager] removeObserver:self forKeyPath:@"theme" context:NULL];
+}
+
 #pragma mark - KVO
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {

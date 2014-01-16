@@ -14,9 +14,11 @@
 
 - (void)themeNavigationController:(UINavigationController *)navigationController;
 
+- (void)themeTableViewController:(UITableViewController *)tableViewController;
+
 - (void)themeViewController:(UIViewController *)viewController;
 
-- (void)themeTableView:(UITableView *)tableView;
+- (void)themeTabBar:(UITabBar *)tabBar;
 
 - (void)themeTableViewCell:(UITableViewCell *)tableViewCell;
 

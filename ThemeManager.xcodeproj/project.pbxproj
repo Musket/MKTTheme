@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A38892718803FC400794DF1 /* EXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A38892618803FC400794DF1 /* EXDemoViewController.m */; };
+		7A388AAA18874BC300794DF1 /* EXTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A388AA918874BC300794DF1 /* EXTableViewController.m */; };
+		7A388AAD18874CFE00794DF1 /* EXMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A388AAC18874CFE00794DF1 /* EXMenuViewController.m */; };
+		7A388AB0188753E700794DF1 /* EXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A388AAF188753E700794DF1 /* EXTabBarController.m */; };
+		7A388AB31887558E00794DF1 /* EXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A388AB21887558E00794DF1 /* EXViewController.m */; };
 		7AC415F3187F886C00920A79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC415F2187F886C00920A79 /* Foundation.framework */; };
 		7AC415F5187F886C00920A79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC415F4187F886C00920A79 /* CoreGraphics.framework */; };
 		7AC415F7187F886C00920A79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC415F6187F886C00920A79 /* UIKit.framework */; };
@@ -40,8 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7A38892518803FC400794DF1 /* EXDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXDemoViewController.h; sourceTree = "<group>"; };
-		7A38892618803FC400794DF1 /* EXDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXDemoViewController.m; sourceTree = "<group>"; };
+		7A388AA818874BC300794DF1 /* EXTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTableViewController.h; sourceTree = "<group>"; };
+		7A388AA918874BC300794DF1 /* EXTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTableViewController.m; sourceTree = "<group>"; };
+		7A388AAB18874CFE00794DF1 /* EXMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXMenuViewController.h; sourceTree = "<group>"; };
+		7A388AAC18874CFE00794DF1 /* EXMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXMenuViewController.m; sourceTree = "<group>"; };
+		7A388AAE188753E700794DF1 /* EXTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTabBarController.h; sourceTree = "<group>"; };
+		7A388AAF188753E700794DF1 /* EXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTabBarController.m; sourceTree = "<group>"; };
+		7A388AB11887558E00794DF1 /* EXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXViewController.h; sourceTree = "<group>"; };
+		7A388AB21887558E00794DF1 /* EXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXViewController.m; sourceTree = "<group>"; };
 		7AC415EF187F886C00920A79 /* ThemeManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThemeManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC415F2187F886C00920A79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7AC415F4187F886C00920A79 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -144,10 +153,16 @@
 				7AC4162A187F8B3700920A79 /* MMThemeHelper */,
 				7AC41601187F886C00920A79 /* EXAppDelegate.h */,
 				7AC41602187F886C00920A79 /* EXAppDelegate.m */,
+				7A388AA818874BC300794DF1 /* EXTableViewController.h */,
+				7A388AA918874BC300794DF1 /* EXTableViewController.m */,
+				7A388AAB18874CFE00794DF1 /* EXMenuViewController.h */,
+				7A388AAC18874CFE00794DF1 /* EXMenuViewController.m */,
+				7A388AAE188753E700794DF1 /* EXTabBarController.h */,
+				7A388AAF188753E700794DF1 /* EXTabBarController.m */,
+				7A388AB11887558E00794DF1 /* EXViewController.h */,
+				7A388AB21887558E00794DF1 /* EXViewController.m */,
 				7AC4160A187F886C00920A79 /* EXToggleViewController.h */,
 				7AC4160B187F886C00920A79 /* EXToggleViewController.m */,
-				7A38892518803FC400794DF1 /* EXDemoViewController.h */,
-				7A38892618803FC400794DF1 /* EXDemoViewController.m */,
 				7AC41604187F886C00920A79 /* Main_iPhone.storyboard */,
 				7AC41607187F886C00920A79 /* Main_iPad.storyboard */,
 				7AC4160D187F886C00920A79 /* Images.xcassets */,
@@ -298,13 +313,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC41603187F886C00920A79 /* EXAppDelegate.m in Sources */,
+				7A388AAD18874CFE00794DF1 /* EXMenuViewController.m in Sources */,
 				7AC4160C187F886C00920A79 /* EXToggleViewController.m in Sources */,
+				7A388AB0188753E700794DF1 /* EXTabBarController.m in Sources */,
 				7AC4162E187F8C7800920A79 /* MMLightTheme.m in Sources */,
 				7AC41634187F96E500920A79 /* MMNavigationController.m in Sources */,
 				7AC41631187F8D3000920A79 /* MMThemeManager.m in Sources */,
+				7A388AAA18874BC300794DF1 /* EXTableViewController.m in Sources */,
 				7AC415FF187F886C00920A79 /* main.m in Sources */,
 				7AC4163A1880232F00920A79 /* MMDarkTheme.m in Sources */,
-				7A38892718803FC400794DF1 /* EXDemoViewController.m in Sources */,
+				7A388AB31887558E00794DF1 /* EXViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

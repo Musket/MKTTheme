@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eh8-FM-5ZQ">
-                                <rect key="frame" x="136" y="268" width="51" height="31"/>
+                                <rect key="frame" x="360" y="496" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="didToggleThemeSwitch:" destination="A4r-zz-LKo" eventType="valueChanged" id="0xh-bO-lLF"/>
@@ -34,12 +34,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSw-Hl-2AK" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="859"/>
+            <point key="canvasLocation" x="1840" y="859"/>
         </scene>
-        <!--Demo View Controller - Theme Demo-->
+        <!--Master View Controller - Theme Demo-->
         <scene sceneID="erc-lU-MMt">
             <objects>
-                <tableViewController id="sdf-4q-ukh" customClass="EXDemoViewController" sceneMemberID="viewController">
+                <tableViewController id="sdf-4q-ukh" customClass="EXMasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="I2c-m8-MG0">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,7 +166,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkx-w7-wca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181" y="81"/>
+            <point key="canvasLocation" x="-534" y="859"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

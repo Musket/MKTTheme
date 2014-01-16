@@ -45,13 +45,20 @@
     [navigationController.toolbar setBarStyle:UIBarStyleBlack];
 }
 
+- (void)themeTabBar:(UITabBar *)tabBar {
+    // Tints
+    [tabBar setBarTintColor:_barTintColor];
+    [tabBar setBarStyle:UIBarStyleBlack];
+}
+
 - (void)themeViewController:(UIViewController *)viewController {
     [viewController.view setBackgroundColor:_viewColor];
 }
 
-- (void)themeTableView:(UITableView *)tableView {
-    [tableView setBackgroundColor:_viewColor];
-    [tableView setSeparatorColor:[UIColor colorWithWhite:0.3f alpha:1.0f]];
+- (void)themeTableViewController:(UITableViewController *)tableViewController {
+    [tableViewController.tableView setBackgroundColor:_viewColor];
+    [tableViewController.tableView setSeparatorColor:[UIColor colorWithWhite:0.3f alpha:1.0f]];
+    [self themeViewController:tableViewController];
 }
 
 - (void)themeTableViewCell:(UITableViewCell *)tableViewCell {

@@ -71,6 +71,11 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)dealloc {
+    // Remove KVO
+    [[MMThemeManager sharedManager] removeObserver:self forKeyPath:@"theme" context:NULL];
+}
+
 #pragma mark - KVO
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
