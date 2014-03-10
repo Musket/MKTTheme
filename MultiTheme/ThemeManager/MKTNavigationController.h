@@ -1,5 +1,5 @@
 //
-//  EXAppDelegate.h
+//  MKTNavigationController.h
 //  ThemeManager
 //
 //  Created by Andrew Berry on 1/9/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EXAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface MKTNavigationController : UINavigationController
 
 @end

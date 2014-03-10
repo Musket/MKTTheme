@@ -1,18 +1,18 @@
 //
-//  ThemeManagerTests.m
-//  ThemeManagerTests
+//  MultiThemeTests.m
+//  MultiThemeTests
 //
-//  Created by Andrew Berry on 1/9/14.
+//  Created by Andrew Berry on 3/10/14.
 //  Copyright (c) 2014 Andrew Berry. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface ThemeManagerTests : XCTestCase
+@interface MultiThemeTests : XCTestCase
 
 @end
 
-@implementation ThemeManagerTests
+@implementation MultiThemeTests
 
 - (void)setUp
 {

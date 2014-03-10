@@ -1,20 +1,19 @@
 //
-//  MMThemeManager.m
+//  MKTThemeManager.m
 //  ThemeManager
 //
 //  Created by Andrew Berry on 1/9/14.
 //  Copyright (c) 2014 Andrew Berry. All rights reserved.
 //
 
-#import "MMThemeManager.h"
+#import "MKTThemeManager.h"
 
-@implementation MMThemeManager
+@implementation MKTThemeManager
 
 #pragma mark - Singleton Methods
 
-// http://www.galloway.me.uk/tutorials/singleton-classes/
 + (id)sharedManager {
-    static MMThemeManager *sharedMyManager = nil;
+    static MKTThemeManager *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedMyManager = [[self alloc] init];

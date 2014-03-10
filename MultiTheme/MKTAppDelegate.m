@@ -1,49 +1,38 @@
 //
-//  EXAppDelegate.m
-//  ThemeManager
+//  MKTAppDelegate.m
+//  MultiTheme
 //
-//  Created by Andrew Berry on 1/9/14.
+//  Created by Andrew Berry on 3/10/14.
 //  Copyright (c) 2014 Andrew Berry. All rights reserved.
 //
 
-#import "EXAppDelegate.h"
-#import "MMThemeManager.h"
-#import "MMLightTheme.h"
-#import "MMDarkTheme.h"
+#import "MKTAppDelegate.h"
+#import "MKTThemeManager.h"
+#import "TMPDarkTheme.h"
+#import "TMPLightTheme.h"
+#import "TMPTableViewController.h"
 
-@implementation EXAppDelegate
+@implementation MKTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    TMPTableViewController *root = [[TMPTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [root setTitle:@"MultiTheme"];
+    
+    [self setNavigationController:[[MKTNavigationController alloc] initWithRootViewController:root]];
+    [self.window setRootViewController:_navigationController];
     
     // Init theme manager
-    MMThemeManager *themeManager = [MMThemeManager sharedManager];
-
-    // The active theme can be saved with user defaults (only applicable if the app has multiple themes)
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [MKTThemeManager sharedManager];
+    [self setActiveTheme];
     
-    NSString *theme = [userDefaults objectForKey:@"theme"];
-    
-    if (theme && [theme isEqualToString:@"dark"]) {
-        // Set theme
-        [themeManager setTheme:[MMDarkTheme new]];
-    }
-    else {
-        [userDefaults setObject:@"light" forKey:@"theme"];
-        [userDefaults synchronize];
-        // Set theme
-        [themeManager setTheme:[MMLightTheme new]];
-    }
-    
-    // Apply theme
-    [self applyActiveTheme];
-    // Observe theme change
-    [[MMThemeManager sharedManager] addObserver:self forKeyPath:@"theme" options:NSKeyValueObservingOptionNew context:NULL];
-    
+    // Override point for customization after application launch.
+    [self.window makeKeyAndVisible];
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -71,23 +60,11 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)dealloc {
-    // Remove KVO
-    [[MMThemeManager sharedManager] removeObserver:self forKeyPath:@"theme" context:NULL];
-}
-
-#pragma mark - KVO
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"theme"]) {
-        [self applyActiveTheme];
-    }
-}
-
 #pragma mark - Theme
 
-- (void)applyActiveTheme {
-    [[[MMThemeManager sharedManager] theme] themeWindowTintColor:_window];
+- (void)setActiveTheme {
+    [[MKTThemeManager sharedManager] setTheme:[TMPDarkTheme new]];
+    [[[MKTThemeManager sharedManager] theme] themeWindow:self.window];
 }
 
 @end

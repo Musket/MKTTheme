@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ThemeManager.xcodeproj">
+      location = "self:MultiTheme.xcodeproj">
    </FileRef>
 </Workspace>

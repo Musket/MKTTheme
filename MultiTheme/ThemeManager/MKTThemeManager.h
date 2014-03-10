@@ -1,5 +1,5 @@
 //
-//  MMLightTheme.h
+//  MKTThemeManager.h
 //  ThemeManager
 //
 //  Created by Andrew Berry on 1/9/14.
@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MMTheme.h"
+#import "MKTTheme.h"
 
-@interface MMLightTheme : NSObject <MMTheme>
+@interface MKTThemeManager : NSObject
+
+@property (nonatomic, retain) id<MKTTheme> theme;
+
++ (id)sharedManager;
 
 @end

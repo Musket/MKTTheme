@@ -1,6 +1,6 @@
 //
-//  MMTheme.h
-//  ThemeManager
+//  MKTTheme.h
+//  MultiTheme
 //
 //  Created by Andrew Berry on 1/9/14.
 //  Copyright (c) 2014 Andrew Berry. All rights reserved.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol MMTheme <NSObject>
+@protocol MKTTheme <NSObject>
 
-- (void)themeWindowTintColor:(UIWindow *)window;
+- (void)themeWindow:(UIWindow *)window;
 
 - (void)themeNavigationController:(UINavigationController *)navigationController;
 
@@ -18,8 +18,8 @@
 
 - (void)themeViewController:(UIViewController *)viewController;
 
-- (void)themeTabBar:(UITabBar *)tabBar;
-
 - (void)themeTableViewCell:(UITableViewCell *)tableViewCell;
+
+- (void)themeSwitch:(UISwitch *)toggle;
 
 @end

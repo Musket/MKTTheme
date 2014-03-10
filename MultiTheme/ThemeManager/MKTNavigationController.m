@@ -1,19 +1,19 @@
 //
-//  MMNavigationController.m
+//  MKTNavigationController.m
 //  ThemeManager
 //
 //  Created by Andrew Berry on 1/9/14.
 //  Copyright (c) 2014 Andrew Berry. All rights reserved.
 //
 
-#import "MMNavigationController.h"
-#import "MMThemeManager.h"
+#import "MKTNavigationController.h"
+#import "MKTThemeManager.h"
 
-@interface MMNavigationController ()
+@interface MKTNavigationController ()
 
 @end
 
-@implementation MMNavigationController
+@implementation MKTNavigationController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,15 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // TODO: would like it translucent, but not sure how to stop flash on initial load or when changing theme...
-    [self.navigationBar setTranslucent:NO];
-    [self.toolbar setTranslucent:NO];
-    
     // Apply theme
-    [self applyActiveTheme];
+    [self style];
     // Observe theme change
-    [[MMThemeManager sharedManager] addObserver:self forKeyPath:@"theme" options:NSKeyValueObservingOptionNew context:NULL];
+    [[MKTThemeManager sharedManager] addObserver:self forKeyPath:@"theme" options:NSKeyValueObservingOptionNew context:NULL];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,7 +40,7 @@
 }
 
 - (void)dealloc {
-    [[MMThemeManager sharedManager] removeObserver:self forKeyPath:@"theme" context:NULL];
+    [[MKTThemeManager sharedManager] removeObserver:self forKeyPath:@"theme" context:NULL];
 }
 
 #pragma mark - KVO
@@ -53,7 +48,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"theme"]) {
         // Apply active theme
-        [self applyActiveTheme];
+        [self style];
 
         // Prevent title transition 'bug' where those on the stack fade in with old text color
         for (UIViewController *vc in self.viewControllers) {
@@ -74,8 +69,8 @@
 
 #pragma mark - Theme
 
-- (void)applyActiveTheme {
-    [[[MMThemeManager sharedManager] theme] themeNavigationController:self];
+- (void)style {
+    [[[MKTThemeManager sharedManager] theme] themeNavigationController:self];
 }
 
 @end
