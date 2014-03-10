@@ -1,4 +1,4 @@
-MMTheme
+MKTTheme
 =======
 
 A simple theme manager for iOS.
